@@ -7,27 +7,27 @@
     "use strict"; // Start of use strict
 
     // Smooth scrolling using jQuery easing
-    $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
+    $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function (e) {
         if (
-            location.pathname.replace(/^\//, "") ==
-                this.pathname.replace(/^\//, "") &&
-            location.hostname == this.hostname
+            location.pathname.replace(/^\//, "") !==
+                this.pathname.replace(/^\//, "") ||
+            location.hostname !== this.hostname
         ) {
-            var target = $(this.hash);
-            target = target.length
-                ? target
-                : $("[name=" + this.hash.slice(1) + "]");
-            if (target.length) {
-                $("html, body").animate(
-                    {
-                        scrollTop: target.offset().top,
-                    },
-                    1000,
-                    "easeInOutExpo"
-                );
-                return false;
-            }
+            return;
         }
+
+        var hash = this.hash.slice(1);
+        var target = $("#" + hash).length ? $("#" + hash) : $("[name='" + hash + "']");
+        if (!target.length) return;
+
+        $("html, body").animate(
+            {
+                scrollTop: target.offset().top,
+            },
+            1000,
+            "easeInOutExpo"
+        );
+        e.preventDefault();
     });
 
     // Closes responsive menu when a scroll trigger link is clicked
