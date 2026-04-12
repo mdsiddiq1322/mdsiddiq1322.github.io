@@ -48,6 +48,29 @@
                 </ul>
             </div>
         </nav>
+        <nav class="mobile-bottom-nav" id="mobileBottomNav" aria-label="Mobile section navigation">
+            <span class="mobile-bottom-nav__glass" aria-hidden="true"></span>
+            <a class="mobile-bottom-nav__link js-scroll-trigger is-active" href="#about" aria-label="About">
+                <i class="fas fa-user-circle"></i>
+                <span class="sr-only">About</span>
+            </a>
+            <a class="mobile-bottom-nav__link js-scroll-trigger" href="#experience" aria-label="Experience">
+                <i class="fas fa-briefcase"></i>
+                <span class="sr-only">Experience</span>
+            </a>
+            <a class="mobile-bottom-nav__link js-scroll-trigger" href="#achievements" aria-label="Achievements">
+                <i class="fas fa-chart-line"></i>
+                <span class="sr-only">Achievements</span>
+            </a>
+            <a class="mobile-bottom-nav__link js-scroll-trigger" href="#skills" aria-label="Skills">
+                <i class="fas fa-code"></i>
+                <span class="sr-only">Skills</span>
+            </a>
+            <a class="mobile-bottom-nav__link js-scroll-trigger" href="#education" aria-label="Education">
+                <i class="fas fa-graduation-cap"></i>
+                <span class="sr-only">Education</span>
+            </a>
+        </nav>
         <div class="container-fluid p-0">
             <section class="resume-section scroll-reveal-section" id="about">
                 <div class="resume-section-content">
@@ -101,36 +124,41 @@
                             <ul class="fa-ul mb-0">
                                 <li>
                                     <span class="fa-li"><i class="fas fa-angle-right"></i></span>
-                                    Implemented a multi-threaded re-indexing tool that increased indexing throughput by 10x and cut a 200
-                                    million record recovery workflow from 60 hours to 6 hours.
+                                    Implemented a multi-threaded re-indexing tool that increased indexing throughput by
+                                    <span class="experience-highlight">10x</span> and cut a
+                                    <span class="experience-highlight">200 million record</span> recovery workflow from
+                                    <span class="experience-highlight">60 hours to 6 hours</span>.
                                 </li>
                                 <li>
                                     <span class="fa-li"><i class="fas fa-angle-right"></i></span>
-                                    Led the overhaul of the global search UI in Zoho CRM, introducing advanced filtering to improve record
-                                    discovery precision for end users.
+                                    Led the overhaul of the <span class="experience-highlight">global search UI</span> in Zoho CRM,
+                                    introducing advanced filtering to improve <span class="experience-highlight">record discovery precision</span>
+                                    for end users.
                                 </li>
                                 <li>
                                     <span class="fa-li"><i class="fas fa-angle-right"></i></span>
                                     Designed a scheduler-based bulk indexing flow with lag monitoring for CRM imports, reducing live indexing
-                                    latency from 2 minutes to 5 seconds.
+                                    latency from <span class="experience-highlight">2 minutes to 5 seconds</span>.
                                 </li>
                                 <li>
                                     <span class="fa-li"><i class="fas fa-angle-right"></i></span>
-                                    Improved search relevance and query efficiency by implementing advanced query optimizations that reduced
-                                    search calls by 80%.
+                                    Improved search relevance and query efficiency through advanced query optimizations that reduced search
+                                    calls by <span class="experience-highlight">80%</span>.
                                 </li>
                                 <li>
                                     <span class="fa-li"><i class="fas fa-angle-right"></i></span>
-                                    Executed indexed-data DC migration for an enterprise CRM customer handling a 300 million record dataset.
+                                    Executed indexed-data DC migration for an enterprise CRM customer handling a
+                                    <span class="experience-highlight">300 million record</span> dataset.
                                 </li>
                                 <li>
                                     <span class="fa-li"><i class="fas fa-angle-right"></i></span>
                                     Built a CLI-driven development workflow tool with Python and Docker, cutting environment setup time from
-                                    2 hours to 10 minutes.
+                                    <span class="experience-highlight">2 hours to 10 minutes</span>.
                                 </li>
                                 <li>
                                     <span class="fa-li"><i class="fas fa-angle-right"></i></span>
-                                    Mentored two junior developers, completed 500+ code reviews, and reinforced maintainable engineering
+                                    Mentored <span class="experience-highlight">two junior developers</span>, completed
+                                    <span class="experience-highlight">500+ code reviews</span>, and reinforced maintainable engineering
                                     practices with documentation and clean code standards.
                                 </li>
                             </ul>
@@ -142,37 +170,46 @@
             <hr class="m-0" />
             <section class="resume-section scroll-reveal-section" id="achievements">
                 <div class="resume-section-content">
-                    <h2 class="mb-5">Key Achievements</h2>
+                    <h2 class="mb-3">Key Achievements</h2>
+                    <p class="lead achievement-intro mb-5">
+                        Impact across search infrastructure, platform reliability, and developer productivity at Zoho CRM.
+                    </p>
                     <div class="achievement-grid">
                         <article class="achievement-card scroll-reveal-item scroll-reveal-delay-1">
+                            <p class="achievement-label">Search Recovery</p>
                             <p class="achievement-metric">10x</p>
-                            <h3 class="h4 mb-2">Faster Recovery Indexing</h3>
-                            <p class="mb-0">Accelerated re-indexing throughput to resolve customer data issues in hours instead of days.</p>
+                            <h3 class="h4 mb-2">Faster Re-indexing Throughput</h3>
+                            <p class="mb-0">Built a multi-threaded recovery tool that turned large customer data fixes from a multi-day operation into a same-day workflow.</p>
                         </article>
                         <article class="achievement-card scroll-reveal-item scroll-reveal-delay-2">
+                            <p class="achievement-label">Scale</p>
                             <p class="achievement-metric">200M</p>
                             <h3 class="h4 mb-2">Records Re-indexed</h3>
-                            <p class="mb-0">Reduced a 200 million record re-indexing run from 60 hours to 6 hours with multi-threaded tooling.</p>
+                            <p class="mb-0">Cut a 200 million record re-indexing run from 60 hours to 6 hours while keeping recovery feasible for enterprise accounts.</p>
                         </article>
                         <article class="achievement-card scroll-reveal-item scroll-reveal-delay-3">
+                            <p class="achievement-label">Bulk Imports</p>
                             <p class="achievement-metric">5 sec</p>
-                            <h3 class="h4 mb-2">Bulk Indexing Latency</h3>
-                            <p class="mb-0">Brought live-data indexing latency down from 2 minutes to 5 seconds during bulk imports.</p>
+                            <h3 class="h4 mb-2">Live Indexing Latency</h3>
+                            <p class="mb-0">Designed a scheduler-based indexing flow with lag monitoring that reduced live-data latency from 2 minutes to 5 seconds.</p>
                         </article>
                         <article class="achievement-card scroll-reveal-item scroll-reveal-delay-1">
+                            <p class="achievement-label">Search Efficiency</p>
                             <p class="achievement-metric">80%</p>
                             <h3 class="h4 mb-2">Fewer Search Calls</h3>
-                            <p class="mb-0">Improved relevance-based search behavior while reducing total search calls across the CRM flow.</p>
+                            <p class="mb-0">Improved relevance-based search behavior through query optimization while substantially reducing call volume across the CRM flow.</p>
                         </article>
                         <article class="achievement-card scroll-reveal-item scroll-reveal-delay-2">
+                            <p class="achievement-label">Migration</p>
                             <p class="achievement-metric">300M</p>
                             <h3 class="h4 mb-2">Records Migrated</h3>
-                            <p class="mb-0">Managed indexed data migration for an enterprise customer with a 300 million record footprint.</p>
+                            <p class="mb-0">Executed indexed-data DC migration for an enterprise CRM customer with a 300 million record footprint.</p>
                         </article>
                         <article class="achievement-card scroll-reveal-item scroll-reveal-delay-3">
+                            <p class="achievement-label">Developer Tooling</p>
                             <p class="achievement-metric">10 min</p>
-                            <h3 class="h4 mb-2">Developer Setup Time</h3>
-                            <p class="mb-0">Automated local development setup with Docker and Python-based tooling, down from 2 hours.</p>
+                            <h3 class="h4 mb-2">Environment Setup Time</h3>
+                            <p class="mb-0">Built Python and Docker-based workflow tooling that reduced local setup time from 2 hours to 10 minutes.</p>
                         </article>
                     </div>
                 </div>
