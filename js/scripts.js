@@ -39,4 +39,33 @@
     $("body").scrollspy({
         target: "#sideNav",
     });
+
+    var prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    var revealTargets = document.querySelectorAll(".scroll-reveal-section, .scroll-reveal-item");
+
+    if (prefersReducedMotion.matches || !("IntersectionObserver" in window)) {
+        revealTargets.forEach(function (target) {
+            target.classList.add("scroll-reveal-visible");
+        });
+        return;
+    }
+
+    var revealObserver = new IntersectionObserver(
+        function (entries, observer) {
+            entries.forEach(function (entry) {
+                if (!entry.isIntersecting) return;
+
+                entry.target.classList.add("scroll-reveal-visible");
+                observer.unobserve(entry.target);
+            });
+        },
+        {
+            threshold: 0.18,
+            rootMargin: "0px 0px -8% 0px",
+        }
+    );
+
+    revealTargets.forEach(function (target) {
+        revealObserver.observe(target);
+    });
 })(jQuery); // End of use strict
